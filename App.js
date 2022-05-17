@@ -70,6 +70,14 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Section title="BigInt">
+            {(BigInt(21) + BigInt(21)).toString()}
+          </Section>
+          <Section title="BigInt">
+            {(BigInt(2) ** BigInt(3)).toString()}
+          </Section>
+          <Section title="BigInt">{typeof (BigInt(2) ** BigInt(3))}</Section>
+          <Section title="Runtime">v8: {global._v8runtime().version}</Section>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
